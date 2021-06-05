@@ -18,8 +18,8 @@ int main() {
     while(TRUE) {
         printf("Opcje programu:\n");
         printf("===============\n");
-        printf("%d %s\n", OPCJA_LINIOWEGO,  " - PierwiastekLiniowy");
-        printf("%d %s\n", OPCJA_KWADRATOWEGO,    " - PierwiastekKwadratowy");
+        printf("%d %s\n", OPCJA_LINIOWEGO,  " - Pierwiastek Liniowy");
+        printf("%d %s\n", OPCJA_KWADRATOWEGO,    " - Pierwiastek Kwadratowy");
         printf("%d %s\n", OPCJA_WYJSCIE,    " - koniec");
         printf("\nPodaj kod polecenia: ");
         scanf("%d", &wybrana_opcja);
@@ -37,11 +37,41 @@ int main() {
     return EXIT_SUCCESS;
 }
 
-void PierwiastekLiniowy() {
-    /* TODO - osoba2 */
+ void PierwiastekLiniowy ()
+{
+    float a,b,x;
+printf("%s \n","Podaj a ");
+if(scanf("%f",&a)==0)
+{
 
-    /* TODO - właściwe obliczanie pola zrealizować poprzez dedykowaną funkcję */
-    printf("\npierwiastek liniowy - TODO\n\n");
+    printf("podaj liczbe\n");
+        exit(EXIT_FAILURE);
+}
+printf("%s \n","Podaj b ");
+if(scanf("%f",&b)==0)
+{
+
+    printf("podaj liczbe\n");
+        exit(EXIT_FAILURE);
+}
+
+if ((a == 0) && (b == 0))
+{
+printf("%s","Rownanie tozsamosciowe\n");
+}
+else
+if (a == 0)
+{
+printf("%s","Rownanie sprzeczne\n");
+}
+else
+{
+x=-b/a;
+printf("%s\n" "%.2f"  "%s", "wynik rownania  - ", x,  "\n\n" );
+}
+
+
+
 }
 
 void PierwiastekKwadratowy() {
